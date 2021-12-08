@@ -10,9 +10,13 @@
 		FB980F312760A2D300FEC37B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB980F302760A2D300FEC37B /* AppDelegate.swift */; };
 		FB980F332760A2D300FEC37B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB980F322760A2D300FEC37B /* SceneDelegate.swift */; };
 		FB980F352760A2D300FEC37B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB980F342760A2D300FEC37B /* ViewController.swift */; };
-		FB980F382760A2D300FEC37B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB980F362760A2D300FEC37B /* Main.storyboard */; };
 		FB980F3A2760A2D500FEC37B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB980F392760A2D500FEC37B /* Assets.xcassets */; };
 		FB980F3D2760A2D500FEC37B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB980F3B2760A2D500FEC37B /* LaunchScreen.storyboard */; };
+		FB980F452760A2EF00FEC37B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB980F442760A2EF00FEC37B /* ContentView.swift */; };
+		FB980F482760A37000FEC37B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB980F472760A37000FEC37B /* WebService.swift */; };
+		FB980F4B2760A45900FEC37B /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB980F4A2760A45900FEC37B /* Stock.swift */; };
+		FB980F4E2760A70000FEC37B /* StockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB980F4D2760A70000FEC37B /* StockListViewModel.swift */; };
+		FB980F502760A73700FEC37B /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB980F4F2760A73700FEC37B /* StockViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +24,14 @@
 		FB980F302760A2D300FEC37B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB980F322760A2D300FEC37B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FB980F342760A2D300FEC37B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FB980F372760A2D300FEC37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB980F392760A2D500FEC37B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB980F3C2760A2D500FEC37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB980F3E2760A2D500FEC37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB980F442760A2EF00FEC37B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB980F472760A37000FEC37B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		FB980F4A2760A45900FEC37B /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		FB980F4D2760A70000FEC37B /* StockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewModel.swift; sourceTree = "<group>"; };
+		FB980F4F2760A73700FEC37B /* StockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		FB980F2F2760A2D300FEC37B /* StockAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FB980F4C2760A6D700FEC37B /* ViewModels */,
+				FB980F492760A44200FEC37B /* Models */,
+				FB980F462760A35400FEC37B /* Services */,
 				FB980F302760A2D300FEC37B /* AppDelegate.swift */,
 				FB980F322760A2D300FEC37B /* SceneDelegate.swift */,
 				FB980F342760A2D300FEC37B /* ViewController.swift */,
-				FB980F362760A2D300FEC37B /* Main.storyboard */,
+				FB980F442760A2EF00FEC37B /* ContentView.swift */,
 				FB980F392760A2D500FEC37B /* Assets.xcassets */,
 				FB980F3B2760A2D500FEC37B /* LaunchScreen.storyboard */,
 				FB980F3E2760A2D500FEC37B /* Info.plist */,
 			);
 			path = StockAppSwiftUI;
+			sourceTree = "<group>";
+		};
+		FB980F462760A35400FEC37B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FB980F472760A37000FEC37B /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FB980F492760A44200FEC37B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB980F4A2760A45900FEC37B /* Stock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB980F4C2760A6D700FEC37B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FB980F4D2760A70000FEC37B /* StockListViewModel.swift */,
+				FB980F4F2760A73700FEC37B /* StockViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +163,6 @@
 			files = (
 				FB980F3D2760A2D500FEC37B /* LaunchScreen.storyboard in Resources */,
 				FB980F3A2760A2D500FEC37B /* Assets.xcassets in Resources */,
-				FB980F382760A2D300FEC37B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,22 +174,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB980F352760A2D300FEC37B /* ViewController.swift in Sources */,
+				FB980F4E2760A70000FEC37B /* StockListViewModel.swift in Sources */,
 				FB980F312760A2D300FEC37B /* AppDelegate.swift in Sources */,
+				FB980F4B2760A45900FEC37B /* Stock.swift in Sources */,
+				FB980F452760A2EF00FEC37B /* ContentView.swift in Sources */,
+				FB980F482760A37000FEC37B /* WebService.swift in Sources */,
 				FB980F332760A2D300FEC37B /* SceneDelegate.swift in Sources */,
+				FB980F502760A73700FEC37B /* StockViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FB980F362760A2D300FEC37B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB980F372760A2D300FEC37B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FB980F3B2760A2D500FEC37B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
